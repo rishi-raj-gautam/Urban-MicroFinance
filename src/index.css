@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+/* Base reset is already sensible from Tailwind; keep extras minimal */
+html, body, #root { height: 100%; }
+body { @apply bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-gray-100 antialiased; }
+
+/* Smooth scroll + focus ring */
+:focus-visible { @apply outline-none ring-2 ring-blue-500/60 rounded-md; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #4b5563; border-radius: 9999px; }
+::-webkit-scrollbar-thumb:hover { background: #6b7280; }
+
+/* Glass card helper (used sparingly) */
+.glass {
+  @apply backdrop-blur-xl border border-white/10 dark:border-white/10 bg-white/70 dark:bg-white/5 shadow-[0_10px_30px_-12px_rgba(0,0,0,0.35)] rounded-2xl ;
+}
+
+/* Subtle divider */
+.divider { @apply border-t border-gray-200/70 dark:border-white/10; }
